@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fba283e67516a5c4eba16f34507b39c3
+timeCreated: 1522258978
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - magazine: {instanceID: 0}
+  - bullet: {instanceID: 0}
+  - sound: {fileID: 4973673369407780, guid: f635578c83403fe4bb319370d8def9c0, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
