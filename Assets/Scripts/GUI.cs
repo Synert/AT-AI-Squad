@@ -294,7 +294,7 @@ public class GUI : MonoBehaviour {
 
         buttons[0].onClick.AddListener(CommandBreach);
         buttons[1].onClick.AddListener(CommandFlash);
-        buttons[2].onClick.AddListener(CommandPeek);
+        //buttons[2].onClick.AddListener(CommandPeek);
 
         tempSync = false;
 

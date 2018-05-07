@@ -529,7 +529,7 @@ public class SquadMember : MonoBehaviour {
 
         if (stacking)
         {
-            if (Vector3.Distance(transform.position, prevPos) * 50.0f < 0.1f)
+            if (Vector3.Distance(transform.position, m_agent.destination) <= 1.0f)
             {
                 if (stackCounter < 200.0f)
                 {
@@ -893,7 +893,7 @@ public class SquadMember : MonoBehaviour {
                 }
             }
         }
-        else if (checking)
+        if (checking)
         {
             if (isLeader)
             {
@@ -913,11 +913,24 @@ public class SquadMember : MonoBehaviour {
                     {
                         if (squad != null)
                         {
-                            squad.checking = true;
-                            squad.checkTimer = checkTimer * 2.5f;
-                            squad.dir = -dir;
+                            //squad.checking = true;
+                            //squad.checkTimer = checkTimer * 2.5f;
+                            squad.lastCheck = lastCheck;
+                            squad.recheck = -10;
+                            squad.checkCooldown = -10;
+                            squad.leftSafe = 0;
+                            squad.rightSafe = 0;
                         }
                     }
+                }
+                if(squadCount == 2)
+                {
+                   // m_squad[1].checking = true;
+                    m_squad[0].lastCheck = lastCheck;
+                    m_squad[0].recheck = -10;
+                    m_squad[0].checkCooldown = -10;
+                    m_squad[0].leftSafe = 0;
+                    m_squad[0].rightSafe = 0;
                 }
             }
 
@@ -989,7 +1002,7 @@ public class SquadMember : MonoBehaviour {
 
         newRot = Quaternion.Euler(0.0f, newRot.eulerAngles.y, 0.0f);
 
-        m_view.localRotation = Quaternion.Lerp(oldRot, newRot, 7.0f * Time.deltaTime);
+        m_view.localRotation = Quaternion.Lerp(oldRot, newRot, 15.0f * Time.deltaTime);
 
         RaycastHit hit;
         //raycast towards them
