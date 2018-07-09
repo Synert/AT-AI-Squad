@@ -17,4 +17,4 @@ They won't take cover as quickly, only choosing to use cover once injured or if 
 When not in combat, they will roam around the map at random, although they seem to often get stuck against the edge walls.
 
 ### Development videos
-(Youtube)[https://www.youtube.com/watch?v=DYjohxC7rVE&list=PL-l8ezR--_wiE5Rp85nqYjn-WB9qWLg1L]
+[Youtube](https://www.youtube.com/watch?v=DYjohxC7rVE&list=PL-l8ezR--_wiE5Rp85nqYjn-WB9qWLg1L)
